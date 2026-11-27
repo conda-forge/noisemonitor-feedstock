@@ -1,13 +1,13 @@
 {% set name = "noisemonitor" %}
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/noisemonitor-{{ version }}.tar.gz
-  sha256: 52599818d7cd731a679e7f48fb4a7340083fff4cdaa84e7eb71e50255f58d547
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/noisemonitor-{{ version }}.tar.gz
+  sha256: cc34c3e03a8e219289db6ac0088d606b6010b4d9a252b14a8735fcf864a4ed6c
 
 build:
   noarch: python
