@@ -1,13 +1,13 @@
 {% set name = "noisemonitor" %}
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/noisemonitor-{{ version }}.tar.gz
-  sha256: 52599818d7cd731a679e7f48fb4a7340083fff4cdaa84e7eb71e50255f58d547
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/noisemonitor-{{ version }}.tar.gz
+  sha256: cc34c3e03a8e219289db6ac0088d606b6010b4d9a252b14a8735fcf864a4ed6c
 
 build:
   noarch: python
@@ -17,15 +17,15 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=77
     - wheel
     - pip
   run:
     - python >={{ python_min }}
     - matplotlib-base >=3.5.3
-    - numpy >=1.21.6
-    - pandas >=1.3.5
-    - xlrd >=2.0.1
+    - numpy >=1.22.4
+    - pandas >=2.2
+    - python-calamine >=0.4.0
     - openpyxl >=3.1.2
     - requests >=2.25.0
     - aiohttp >=3.8.0
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/valerianF/noisemonitor
-  summary: Long-term sound level measurements analysis in Python
+  summary: A Python package for sound level data analysis
   license: Apache-2.0
   license_file: LICENSE
 
